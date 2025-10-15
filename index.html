@@ -3,428 +3,348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>音樂會場刊 | Concert Program</title>
+    <title>維樂天 Judy Cheng 慈善籌款音樂會場刊</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <!-- Toggle Button for Page Flip Effect -->
-        <div class="controls">
-            <button id="toggleFlip" class="toggle-btn">啟用掀頁效果 / Enable Page Flip</button>
-        </div>
-
-        <!-- Scroll Mode (Default) -->
-        <div id="scrollMode" class="scroll-mode active">
-            <div class="page cover-page">
-                <h1>慈善音樂會</h1>
-                <h2>Charity Concert</h2>
-                <div class="subtitle">支持「維樂天」蝴蝶計劃</div>
-                <div class="subtitle-en">Supporting Butterfly Project</div>
-            </div>
-
-            <!-- Page 1: Judy Cheng Introduction -->
-            <div class="page">
-                <h3 class="section-title">節目表 Program</h3>
-                <div class="program-item">
-                    <h4>1. 音樂會發起人 - Judy Cheng</h4>
-                    <p class="bio">Judy 自小6歲開始學習鋼琴，12歲已考獲英國皇家音樂學院八級，中學期間為學校合唱團及獨唱伴奏，屢次在香港校際音樂節奪冠。其後進入香港音樂學院修讀四年的鋼琴演奏文憑（前香港演藝學院），曾跟隨郭嘉特老師、羅乃新老師及Teresita Botelho 老師學習；期間Judy曾擔任錄音、鋼琴伴奏、及教學工作。1997年Judy 移居加拿大多倫多後回流返港，為了照顧家庭再沒有從事演藝工作。2020年開始在教會擔任崇拜司琴及詩班伴奏。這個音樂會是Judy個人夢想的實踐, 藉這個機會與觀眾分享他對音樂的熱誠，並回饋社會為慈善公益出一分力。</p>
-                </div>
-            </div>
-
-            <!-- Page 2: Video & Butterfly Project -->
-            <div class="page">
-                <div class="program-item">
-                    <h4>2. 3分鐘短片 （維樂天）</h4>
-                    <a href="https://youtu.be/FS4IZAfL05Q" target="_blank" class="video-link">https://youtu.be/FS4IZAfL05Q</a>
-                </div>
-
-                <div class="program-item">
-                    <h4>3. 「維樂天」蝴蝶計劃 - 機構負責人Susanna Ng</h4>
-                    <p class="bio">蝴蝶計劃於2016年成立，是維樂天首個服務計劃，目的是為21歲或以下、懷疑受精神健康問題困擾的兒童和青少年，免費提供初步評估及適切治療，掌握治療黃金期，直至他們可銜接至公營精神科服務。服務對象主要是正在苦候公共醫療服務，卻又無力負擔私營醫療或精神科服務的基層家庭。</p>
-                </div>
-            </div>
-
-            <!-- Page 3: Cello Solo & String Quartet -->
-            <div class="page">
-                <div class="program-item">
-                    <h4>4. 大提琴獨奏：Ling So</h4>
-                    <p class="performance-detail">鋼琴伴奏：Judy Cheng</p>
-                    <p class="piece"><em>Greensleeves</em></p>
-                    <p class="composer">composed by Vaughan Williams (1872-1958)</p>
-                </div>
-
-                <div class="program-item">
-                    <h4>5. 弦樂四重奏</h4>
-                    <p class="performance-detail">第一小提琴：So Yun Ling</p>
-                    <p class="performance-detail">第二小提琴：Fong Chung Hoi</p>
-                    <p class="performance-detail">第三小提琴：Hung Nga Ki</p>
-                    <p class="performance-detail">鋼琴：Judy Cheng</p>
-                    <p class="piece"><em>Canon in D</em></p>
-                    <p class="composer">composed by Johann Pachelbel (1653-1706)</p>
-                </div>
-            </div>
-
-            <!-- Page 4: Tenor Solo & Piano Solo -->
-            <div class="page">
-                <div class="program-item">
-                    <h4>6. 男高音獨唱：沈永康牧師</h4>
-                    <p class="performance-detail">鋼琴：Judy Cheng</p>
-                    <p class="piece">黃河頌</p>
-                    <p class="composer">作者：冼星海 (1939)</p>
-                    <p class="piece"><em>You raise me up</em></p>
-                    <p class="composer">composed by Brendan Graham (2002)</p>
-                </div>
-
-                <div class="program-item">
-                    <h4>7. Piano Solo: Judy Cheng</h4>
-                    <p class="piece"><em>Passacaglia</em></p>
-                    <p class="composer">by George Frederic Handel (1685-1759)</p>
-                    <p class="piece"><em>1st Arabesque</em></p>
-                    <p class="composer">by Claude Debussy (1862-1918)</p>
-                    <p class="piece"><em>The name of Life - Spirited Away</em></p>
-                    <p class="composer">by Joe Hisaishi (2001)</p>
-                </div>
-            </div>
-
-            <!-- Page 5: Solo Performances -->
-            <div class="page">
-                <div class="program-item">
-                    <h4>8. 獨唱：Henry Fung</h4>
-                    <p class="performance-detail">鋼琴：Judy Cheng</p>
-                    <p class="piece">誰能明白我</p>
-                    <p class="composer">作曲：林子祥</p>
-                </div>
-
-                <div class="program-item">
-                    <h4>9. 獨唱：Odele Lee</h4>
-                    <p class="performance-detail">鋼琴：Judy Cheng</p>
-                    <p class="piece">Children song</p>
-                    <p class="composer">作曲：周國賢</p>
-                </div>
-            </div>
-
-            <!-- Page 6: Musical Drama Cast -->
-            <div class="page">
-                <div class="program-item">
-                    <h4>10. 《Butterfly Gala：破繭成長記》音樂劇</h4>
-                    <div class="cast">
-                        <h5>演員：</h5>
-                        <p class="cast-member">Katniss Ho 何健儀 飾演 Mei</p>
-                        <p class="cast-member">Elvis Kwok 郭啟銘 飾演 Hei</p>
-                        <p class="cast-member">Elvis Ng 飾演 Mei 爸爸</p>
-                        <p class="cast-member">Queenie Lee 飾演 Mei 媽媽</p>
-                        <p class="cast-member">陶芷澄 飾演 社工</p>
-                        <p class="cast-member">Judy Cheng (背景伴奏)</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Page 7: Musical Act 1 -->
-            <div class="page">
-                <div class="musical-act">
-                    <h5>[序幕：迷失的毛蟲]</h5>
-                    <p class="performer">Mei (Judy)</p>
-                </div>
-
-                <div class="musical-act">
-                    <h5>[第一幕：愛的幻覺]</h5>
-                    <p class="performer">Mei/Hei</p>
-
-                    <p class="song">歌曲：戀愛預告</p>
-                    <p class="performer">Avery Yeung</p>
-
-                    <p class="song">歌曲：On my way</p>
-                    <p class="performer">Emily Lau</p>
-
-                    <p class="performer">Judy（背景伴奏）</p>
-
-                    <p class="song">歌曲：流沙</p>
-                    <p class="performer">Elvis Kwok</p>
-                </div>
-            </div>
-
-            <!-- Page 8: Musical Act 2 & 3 -->
-            <div class="page">
-                <div class="musical-act">
-                    <h5>[第二幕：心碎與墮落]</h5>
-                    <p class="performer">Mei (Judy：背景伴奏)</p>
-
-                    <p class="song">歌曲：心痛</p>
-                    <p class="performer">Redelle</p>
-
-                    <p class="song">歌曲：不浪漫罪名</p>
-                    <p class="performer">Elvis Ng</p>
-                    <p class="performer">(Judy：背景伴奏)</p>
-                </div>
-
-                <div class="musical-act">
-                    <h5>[第三幕：黑暗中的光]</h5>
-                    <p class="performer">(Judy：背景伴奏)</p>
-
-                    <p class="song">歌曲：當我迷失時聽着的歌</p>
-                    <p class="performer">陶芷澄</p>
-                    <p class="performer">(Judy：背景伴奏)</p>
-
-                    <p class="song">歌曲：I'd give my life for you</p>
-                    <p class="performer">Queenie Lee</p>
-                </div>
-            </div>
-
-            <!-- Page 9: Musical Act 4 & Finale -->
-            <div class="page">
-                <div class="musical-act">
-                    <h5>[第四幕：破繭]</h5>
-                    <p class="song">歌曲：She used to be mine</p>
-                    <p class="performer">Stella Poon</p>
-
-                    <p class="song">歌曲：女神</p>
-                    <p class="performer">Inez Lee</p>
-
-                    <p class="song">歌曲：笑忘書</p>
-                    <p class="performer">Jacky Him</p>
-                    <p class="performer">(Judy：背景伴奏)</p>
-                </div>
-
-                <div class="musical-act">
-                    <h5>[終幕：飛翔]</h5>
-                    <p class="song">歌曲：追夢十五</p>
-                    <p class="performer">曾淑瑩</p>
-
-                    <p class="song">歌曲：天空沒有極限</p>
-                    <p class="performer">Tree Woo</p>
-                </div>
-
-                <div class="musical-act">
-                    <h5>[出場謝幕]</h5>
-                </div>
-            </div>
-
-            <!-- Page 10: Final Performance & Thanks -->
-            <div class="page">
-                <div class="program-item">
-                    <h4>11. 獨唱：Michael Ling</h4>
-                    <p class="performance-detail">鋼琴：Judy Cheng</p>
-                    <p class="piece">天下無雙</p>
-                    <p class="composer">作曲：柳重言</p>
-                </div>
-
-                <div class="thanks">
-                    <h4>鳴謝 Acknowledgements</h4>
-                    <p class="sponsor">贊助商：</p>
-                </div>
-
-                <div class="end">
-                    <p>～～～ END ～～～</p>
-                </div>
-            </div>
-        </div>
-
         <!-- Flip Mode -->
         <div id="flipMode" class="flip-mode">
             <div id="flipbook">
                 <!-- Cover -->
                 <div class="page-flip cover-page">
-                    <h1>慈善音樂會</h1>
-                    <h2>Charity Concert</h2>
-                    <div class="subtitle">支持「維樂天」蝴蝶計劃</div>
-                    <div class="subtitle-en">Supporting Butterfly Project</div>
+                    <div class="content">
+                        <img src="cover.jpeg">
+                    </div>
                 </div>
 
                 <!-- Page 1 -->
                 <div class="page-flip">
-                    <h3 class="section-title">節目表 Program</h3>
-                    <div class="program-item">
-                        <h4>1. 音樂會發起人 - Judy Cheng</h4>
-                        <p class="bio">Judy 自小6歲開始學習鋼琴，12歲已考獲英國皇家音樂學院八級，中學期間為學校合唱團及獨唱伴奏，屢次在香港校際音樂節奪冠。其後進入香港音樂學院修讀四年的鋼琴演奏文憑（前香港演藝學院），曾跟隨郭嘉特老師、羅乃新老師及Teresita Botelho 老師學習；期間Judy曾擔任錄音、鋼琴伴奏、及教學工作。1997年Judy 移居加拿大多倫多後回流返港，為了照顧家庭再沒有從事演藝工作。2020年開始在教會擔任崇拜司琴及詩班伴奏。這個音樂會是Judy個人夢想的實踐, 藉這個機會與觀眾分享他對音樂的熱誠，並回饋社會為慈善公益出一分力。</p>
+                    <div class="content">
+                        <h3 class="section-title">節目表 Program</h3>
+                        <div class="program-item">
+                            <h4>1. 音樂會發起人 - Judy Cheng</h4>
+                            <p class="bio">Judy 自小6歲開始學習鋼琴，12歲已考獲英國皇家音樂學院八級，中學期間為學校合唱團及獨唱伴奏，屢次在香港校際音樂節奪冠。其後進入香港音樂學院修讀四年的鋼琴演奏文憑（前香港演藝學院），曾跟隨郭嘉特老師、羅乃新老師及Teresita Botelho 老師學習；期間Judy曾擔任錄音、鋼琴伴奏、及教學工作。1997年Judy 移居加拿大多倫多後回流返港，為了照顧家庭再沒有從事演藝工作。2020年開始在教會擔任崇拜司琴及詩班伴奏。這個音樂會是Judy個人夢想的實踐, 藉這個機會與觀眾分享他對音樂的熱誠，並回饋社會為慈善公益出一分力。</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Page 2 -->
                 <div class="page-flip">
-                    <div class="program-item">
-                        <h4>2. 3分鐘短片 （維樂天）</h4>
-                        <a href="https://youtu.be/FS4IZAfL05Q" target="_blank" class="video-link">https://youtu.be/FS4IZAfL05Q</a>
-                    </div>
+                    <div class="content">
+                        <div class="program-item">
+                            <h4>2. 3分鐘短片 （維樂天）</h4>
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/FS4IZAfL05Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
 
-                    <div class="program-item">
-                        <h4>3. 「維樂天」蝴蝶計劃 - 機構負責人Susanna Ng</h4>
-                        <p class="bio">蝴蝶計劃於2016年成立，是維樂天首個服務計劃，目的是為21歲或以下、懷疑受精神健康問題困擾的兒童和青少年，免費提供初步評估及適切治療，掌握治療黃金期，直至他們可銜接至公營精神科服務。服務對象主要是正在苦候公共醫療服務，卻又無力負擔私營醫療或精神科服務的基層家庭。</p>
+                        <div class="program-item">
+                            <h4>3. 「維樂天」蝴蝶計劃 - 機構負責人Susanna Ng</h4>
+                            <p class="bio">蝴蝶計劃於2016年成立，是維樂天首個服務計劃，目的是為21歲或以下、懷疑受精神健康問題困擾的兒童和青少年，免費提供初步評估及適切治療，掌握治療黃金期，直至他們可銜接至公營精神科服務。服務對象主要是正在苦候公共醫療服務，卻又無力負擔私營醫療或精神科服務的基層家庭。</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Page 3 -->
                 <div class="page-flip">
-                    <div class="program-item">
-                        <h4>4. 大提琴獨奏：Ling So</h4>
-                        <p class="performance-detail">鋼琴伴奏：Judy Cheng</p>
-                        <p class="piece"><em>Greensleeves</em></p>
-                        <p class="composer">composed by Vaughan Williams (1872-1958)</p>
-                    </div>
+                    <div class="content">
+                        <div class="program-item">
+                            <h4>4. 大提琴獨奏：Ling So</h4>
+                            <p class="performance-detail">鋼琴伴奏：Judy Cheng</p>
+                            <p class="piece"><em>Greensleeves</em></p>
+                            <p class="composer">composed by Vaughan Williams (1872-1958)</p>
+                        </div>
 
-                    <div class="program-item">
-                        <h4>5. 弦樂四重奏</h4>
-                        <p class="performance-detail">第一小提琴：So Yun Ling</p>
-                        <p class="performance-detail">第二小提琴：Fong Chung Hoi</p>
-                        <p class="performance-detail">第三小提琴：Hung Nga Ki</p>
-                        <p class="performance-detail">鋼琴：Judy Cheng</p>
-                        <p class="piece"><em>Canon in D</em></p>
-                        <p class="composer">composed by Johann Pachelbel (1653-1706)</p>
+                        <div class="program-item">
+                            <h4>5. 弦樂四重奏</h4>
+                            <p class="performance-detail">第一小提琴：So Yun Ling</p>
+                            <p class="performance-detail">第二小提琴：Fong Chung Hoi</p>
+                            <p class="performance-detail">第三小提琴：Hung Nga Ki</p>
+                            <p class="performance-detail">鋼琴：Judy Cheng</p>
+                            <p class="piece"><em>Canon in D</em></p>
+                            <p class="composer">composed by Johann Pachelbel (1653-1706)</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Page 4 -->
                 <div class="page-flip">
-                    <div class="program-item">
-                        <h4>6. 男高音獨唱：沈永康牧師</h4>
-                        <p class="performance-detail">鋼琴：Judy Cheng</p>
-                        <p class="piece">黃河頌</p>
-                        <p class="composer">作者：冼星海 (1939)</p>
-                        <p class="piece"><em>You raise me up</em></p>
-                        <p class="composer">composed by Brendan Graham (2002)</p>
-                    </div>
+                    <div class="content">
+                        <div class="program-item">
+                            <h4>6. 男高音獨唱：沈永康牧師</h4>
+                            <p class="performance-detail">鋼琴：Judy Cheng</p>
+                            <p class="piece">黃河頌</p>
+                            <p class="composer">作者：冼星海 (1939)</p>
+                            <p class="piece"><em>You raise me up</em></p>
+                            <p class="composer">composed by Brendan Graham (2002)</p>
+                        </div>
 
-                    <div class="program-item">
-                        <h4>7. Piano Solo: Judy Cheng</h4>
-                        <p class="piece"><em>Passacaglia</em></p>
-                        <p class="composer">by George Frederic Handel (1685-1759)</p>
-                        <p class="piece"><em>1st Arabesque</em></p>
-                        <p class="composer">by Claude Debussy (1862-1918)</p>
-                        <p class="piece"><em>The name of Life - Spirited Away</em></p>
-                        <p class="composer">by Joe Hisaishi (2001)</p>
+                        <div class="program-item">
+                            <h4>7. Piano Solo: Judy Cheng</h4>
+                            <p class="piece"><em>Passacaglia</em></p>
+                            <p class="composer">by George Frederic Handel (1685-1759)</p>
+                            <p class="piece"><em>1st Arabesque</em></p>
+                            <p class="composer">by Claude Debussy (1862-1918)</p>
+                            <p class="piece"><em>The name of Life - Spirited Away</em></p>
+                            <p class="composer">by Joe Hisaishi (2001)</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Page 5 -->
                 <div class="page-flip">
-                    <div class="program-item">
-                        <h4>8. 獨唱：Henry Fung</h4>
-                        <p class="performance-detail">鋼琴：Judy Cheng</p>
-                        <p class="piece">誰能明白我</p>
-                        <p class="composer">作曲：林子祥</p>
-                    </div>
+                    <div class="content">
+                        <div class="program-item">
+                            <h4>8. 獨唱：Henry Fung</h4>
+                            <p class="performance-detail">鋼琴：Judy Cheng</p>
+                            <p class="piece">誰能明白我</p>
+                            <p class="composer">作曲：林子祥</p>
+                        </div>
 
-                    <div class="program-item">
-                        <h4>9. 獨唱：Odele Lee</h4>
-                        <p class="performance-detail">鋼琴：Judy Cheng</p>
-                        <p class="piece">Children song</p>
-                        <p class="composer">作曲：周國賢</p>
+                        <div class="program-item">
+                            <h4>9. 獨唱：Odele Lee</h4>
+                            <p class="performance-detail">鋼琴：Judy Cheng</p>
+                            <p class="piece">Children song</p>
+                            <p class="composer">作曲：周國賢</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Page 6 -->
                 <div class="page-flip">
-                    <div class="program-item">
-                        <h4>10. 《Butterfly Gala：破繭成長記》音樂劇</h4>
-                        <div class="cast">
-                            <h5>演員：</h5>
-                            <p class="cast-member">Katniss Ho 何健儀 飾演 Mei</p>
-                            <p class="cast-member">Elvis Kwok 郭啟銘 飾演 Hei</p>
-                            <p class="cast-member">Elvis Ng 飾演 Mei 爸爸</p>
-                            <p class="cast-member">Queenie Lee 飾演 Mei 媽媽</p>
-                            <p class="cast-member">陶芷澄 飾演 社工</p>
-                            <p class="cast-member">Judy Cheng (背景伴奏)</p>
+                    <div class="content">
+                        <div class="program-item">
+                            <h4>10. 《Butterfly Gala：破繭成長記》音樂劇</h4>
+                            <div class="cast">
+                                <h5>演員：</h5>
+                                <p class="cast-member">Katniss Ho 何健儀 飾演 Mei</p>
+                                <p class="cast-member">Elvis Kwok 郭啟銘 飾演 Hei</p>
+                                <p class="cast-member">Elvis Ng 飾演 Mei 爸爸</p>
+                                <p class="cast-member">Queenie Lee 飾演 Mei 媽媽</p>
+                                <p class="cast-member">陶芷澄 飾演 社工</p>
+                                <p class="cast-member">Judy Cheng (背景伴奏)</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Page 7 -->
                 <div class="page-flip">
-                    <div class="musical-act">
-                        <h5>[序幕：迷失的毛蟲]</h5>
-                        <p class="performer">Mei (Judy)</p>
-                    </div>
+                    <div class="content">
+                        <div class="musical-act">
+                            <h5>[序幕：迷失的毛蟲]</h5>
+                            <p class="performer">Mei (Judy)</p>
+                        </div>
 
-                    <div class="musical-act">
-                        <h5>[第一幕：愛的幻覺]</h5>
-                        <p class="performer">Mei/Hei</p>
+                        <div class="musical-act">
+                            <h5>[第一幕：愛的幻覺]</h5>
+                            <p class="performer">Mei/Hei</p>
 
-                        <p class="song">歌曲：戀愛預告</p>
-                        <p class="performer">Avery Yeung</p>
+                            <p class="song">歌曲：戀愛預告</p>
+                            <p class="performer">Avery Yeung</p>
 
-                        <p class="song">歌曲：On my way</p>
-                        <p class="performer">Emily Lau</p>
+                            <p class="song">歌曲：On my way</p>
+                            <p class="performer">Emily Lau</p>
 
-                        <p class="performer">Judy（背景伴奏）</p>
+                            <p class="performer">Judy（背景伴奏）</p>
 
-                        <p class="song">歌曲：流沙</p>
-                        <p class="performer">Elvis Kwok</p>
+                            <p class="song">歌曲：流沙</p>
+                            <p class="performer">Elvis Kwok</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Page 8 -->
                 <div class="page-flip">
-                    <div class="musical-act">
-                        <h5>[第二幕：心碎與墮落]</h5>
-                        <p class="performer">Mei (Judy：背景伴奏)</p>
+                    <div class="content">
+                        <div class="musical-act">
+                            <h5>[第二幕：心碎與墮落]</h5>
+                            <p class="performer">Mei (Judy：背景伴奏)</p>
 
-                        <p class="song">歌曲：心痛</p>
-                        <p class="performer">Redelle</p>
+                            <p class="song">歌曲：心痛</p>
+                            <p class="performer">Redelle</p>
 
-                        <p class="song">歌曲：不浪漫罪名</p>
-                        <p class="performer">Elvis Ng</p>
-                        <p class="performer">(Judy：背景伴奏)</p>
-                    </div>
+                            <p class="song">歌曲：不浪漫罪名</p>
+                            <p class="performer">Elvis Ng</p>
+                            <p class="performer">(Judy：背景伴奏)</p>
+                        </div>
 
-                    <div class="musical-act">
-                        <h5>[第三幕：黑暗中的光]</h5>
-                        <p class="performer">(Judy：背景伴奏)</p>
+                        <div class="musical-act">
+                            <h5>[第三幕：黑暗中的光]</h5>
+                            <p class="performer">(Judy：背景伴奏)</p>
 
-                        <p class="song">歌曲：當我迷失時聽着的歌</p>
-                        <p class="performer">陶芷澄</p>
-                        <p class="performer">(Judy：背景伴奏)</p>
+                            <p class="song">歌曲：當我迷失時聽着的歌</p>
+                            <p class="performer">陶芷澄</p>
+                            <p class="performer">(Judy：背景伴奏)</p>
 
-                        <p class="song">歌曲：I'd give my life for you</p>
-                        <p class="performer">Queenie Lee</p>
+                            <p class="song">歌曲：I'd give my life for you</p>
+                            <p class="performer">Queenie Lee</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Page 9 -->
                 <div class="page-flip">
-                    <div class="musical-act">
-                        <h5>[第四幕：破繭]</h5>
-                        <p class="song">歌曲：She used to be mine</p>
-                        <p class="performer">Stella Poon</p>
+                    <div class="content">
+                        <div class="musical-act">
+                            <h5>[第四幕：破繭]</h5>
+                            <p class="song">歌曲：She used to be mine</p>
+                            <p class="performer">Stella Poon</p>
 
-                        <p class="song">歌曲：女神</p>
-                        <p class="performer">Inez Lee</p>
+                            <p class="song">歌曲：女神</p>
+                            <p class="performer">Inez Lee</p>
 
-                        <p class="song">歌曲：笑忘書</p>
-                        <p class="performer">Jacky Him</p>
-                        <p class="performer">(Judy：背景伴奏)</p>
-                    </div>
+                            <p class="song">歌曲：笑忘書</p>
+                            <p class="performer">Jacky Him</p>
+                            <p class="performer">(Judy：背景伴奏)</p>
+                        </div>
 
-                    <div class="musical-act">
-                        <h5>[終幕：飛翔]</h5>
-                        <p class="song">歌曲：追夢十五</p>
-                        <p class="performer">曾淑瑩</p>
+                        <div class="musical-act">
+                            <h5>[終幕：飛翔]</h5>
+                            <p class="song">歌曲：追夢十五</p>
+                            <p class="performer">曾淑瑩</p>
 
-                        <p class="song">歌曲：天空沒有極限</p>
-                        <p class="performer">Tree Woo</p>
-                    </div>
+                            <p class="song">歌曲：天空沒有極限</p>
+                            <p class="performer">Tree Woo</p>
+                        </div>
 
-                    <div class="musical-act">
-                        <h5>[出場謝幕]</h5>
+                        <div class="musical-act">
+                            <h5>[出場謝幕]</h5>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Page 10 -->
                 <div class="page-flip">
-                    <div class="program-item">
-                        <h4>11. 獨唱：Michael Ling</h4>
-                        <p class="performance-detail">鋼琴：Judy Cheng</p>
-                        <p class="piece">天下無雙</p>
-                        <p class="composer">作曲：柳重言</p>
-                    </div>
+                    <div class="content">
+                        <div class="program-item">
+                            <h4>11. 獨唱：Michael Ling</h4>
+                            <p class="performance-detail">鋼琴：Judy Cheng</p>
+                            <p class="piece">天下無雙</p>
+                            <p class="composer">作曲：柳重言</p>
+                        </div>
 
-                    <div class="thanks">
-                        <h4>鳴謝 Acknowledgements</h4>
-                        <p class="sponsor">贊助商：</p>
+                        <div class="thanks">
+                            <h4>鳴謝 Acknowledgements</h4>
+                            <p class="sponsor">贊助商：</p>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="end">
-                        <p>～～～ END ～～～</p>
+                <!-- Sponsor Page 1 -->
+                <div class="page-flip sponsor-page">
+                    <div class="content">
+                        <img src="sponsors/sponsor-01.jpeg" alt="Sponsor 1">
+                    </div>
+                </div>
+
+                <!-- Sponsor Page 2 -->
+                <div class="page-flip sponsor-page">
+                    <div class="content">
+                        <img src="sponsors/sponsor-02.jpeg" alt="Sponsor 2">
+                    </div>
+                </div>
+
+                <!-- Sponsor Page 3 -->
+                <div class="page-flip sponsor-page">
+                    <div class="content">
+                        <img src="sponsors/sponsor-03.jpeg" alt="Sponsor 3">
+                    </div>
+                </div>
+
+                <!-- Sponsor Page 4 -->
+                <div class="page-flip sponsor-page">
+                    <div class="content">
+                        <img src="sponsors/sponsor-04.jpeg" alt="Sponsor 4">
+                    </div>
+                </div>
+
+                <!-- Sponsor Page 5 -->
+                <div class="page-flip sponsor-page">
+                    <div class="content">
+                        <img src="sponsors/sponsor-05.jpeg" alt="Sponsor 5">
+                    </div>
+                </div>
+
+                <!-- Sponsor Page 6 -->
+                <div class="page-flip sponsor-page">
+                    <div class="content">
+                        <img src="sponsors/sponsor-06.jpeg" alt="Sponsor 6">
+                    </div>
+                </div>
+
+                <!-- Sponsor Page 7 -->
+                <div class="page-flip sponsor-page">
+                    <div class="content">
+                        <img src="sponsors/sponsor-07.jpeg" alt="Sponsor 7">
+                    </div>
+                </div>
+
+                <!-- Sponsor Page 8 -->
+                <div class="page-flip sponsor-page">
+                    <div class="content">
+                        <img src="sponsors/sponsor-08.jpeg" alt="Sponsor 8">
+                    </div>
+                </div>
+
+                <!-- Sponsor Page 9 -->
+                <div class="page-flip sponsor-page">
+                    <div class="content">
+                        <img src="sponsors/sponsor-09.jpeg" alt="Sponsor 9">
+                    </div>
+                </div>
+
+                <!-- Sponsor Page 10 -->
+                <div class="page-flip sponsor-page">
+                    <div class="content">
+                        <img src="sponsors/sponsor-10.jpeg" alt="Sponsor 10">
+                    </div>
+                </div>
+
+                <!-- Sponsor Page 11 -->
+                <div class="page-flip sponsor-page">
+                    <div class="content">
+                        <img src="sponsors/sponsor-11.jpeg" alt="Sponsor 11">
+                    </div>
+                </div>
+
+                <!-- Sponsor Page 12 -->
+                <div class="page-flip sponsor-page">
+                    <div class="content">
+                        <img src="sponsors/sponsor-12.jpeg" alt="Sponsor 12">
+                    </div>
+                </div>
+
+                <!-- Sponsor Page 13 -->
+                <div class="page-flip sponsor-page">
+                    <div class="content">
+                        <img src="sponsors/sponsor-13.jpeg" alt="Sponsor 13">
+                    </div>
+                </div>
+
+                <!-- Sponsor Page 14 -->
+                <div class="page-flip sponsor-page">
+                    <div class="content">
+                        <img src="sponsors/sponsor-14.jpeg" alt="Sponsor 14">
+                    </div>
+                </div>
+
+                <!-- Sponsor Page 15 -->
+                <div class="page-flip sponsor-page">
+                    <div class="content">
+                        <img src="sponsors/sponsor-15.jpeg" alt="Sponsor 15">
+                    </div>
+                </div>
+
+                <!-- Page 11 - End -->
+                <div class="page-flip">
+                    <div class="content">
+                        <div class="end">
+                            <p>～～～ END ～～～</p>
+                        </div>
                     </div>
                 </div>
             </div>

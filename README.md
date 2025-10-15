@@ -1,25 +1,27 @@
 # 音樂會場刊 Concert Program Booklet
 
-這是一個為 Judy Cheng 慈善音樂會製作的在線場刊，支援手機閱讀，並提供可選的掀頁效果。
+這是一個為 Judy Cheng 慈善音樂會製作的在線場刊，支援手機閱讀，提供掀頁效果。配色與封面相配，場刊比例為 4:5。
 
-This is an online program booklet for Judy Cheng's charity concert, optimized for mobile viewing with an optional page-flip effect.
+This is an online program booklet for Judy Cheng's charity concert, optimized for mobile viewing with page-flip effect. Color scheme matches the cover, with 4:5 aspect ratio.
 
 ## 功能特點 Features
 
 - 📱 **手機優化** - 完美適配各種手機屏幕
-- 📖 **雙模式** - 支持滾動模式和掀頁模式
-- 🎨 **美觀設計** - 漸變背景和優雅排版
+- 📖 **掀頁效果** - 真實的翻書體驗
+- 🎨 **美觀設計** - 暖色調漸變背景，優雅排版
 - 👆 **觸控友好** - 支持滑動翻頁
 - ⌨️ **鍵盤導航** - 可用鍵盤方向鍵翻頁
+- 🎬 **嵌入影片** - YouTube 播放器直接嵌入
 - 🖨️ **列印友好** - 支持列印輸出
 
 ---
 
 - 📱 **Mobile Optimized** - Perfect for all mobile screens
-- 📖 **Dual Modes** - Scroll mode and flip mode
-- 🎨 **Beautiful Design** - Gradient background and elegant typography
+- 📖 **Page-Flip Effect** - Realistic book flipping experience
+- 🎨 **Beautiful Design** - Warm gradient background with elegant typography
 - 👆 **Touch-Friendly** - Swipe to flip pages
 - ⌨️ **Keyboard Navigation** - Use arrow keys to navigate
+- 🎬 **Embedded Video** - YouTube player directly embedded
 - 🖨️ **Print-Friendly** - Ready for printing
 
 ## 如何使用 How to Use
@@ -49,32 +51,17 @@ Then open `http://localhost:8000` in your browser.
 
 Upload all files to your web hosting to use online.
 
-## 模式切換 Mode Switching
-
-- **滾動模式** (預設) - 適合快速瀏覽，向下滾動查看所有內容
-- **掀頁模式** - 點擊按鈕啟用，提供真實的翻頁體驗
-
----
-
-- **Scroll Mode** (Default) - Quick browsing, scroll down to view all content
-- **Flip Mode** - Click button to enable, provides realistic page-flipping experience
-
 ## 操作說明 Controls
 
-### 滾動模式 Scroll Mode
-- 向下滾動查看所有頁面
-- Scroll down to view all pages
-
-### 掀頁模式 Flip Mode
 - 點擊左右按鈕翻頁
-- 在頁面上左右滑動翻頁
+- 在頁面上左右滑動翻頁（手機）
 - 使用鍵盤方向鍵 (←/→) 翻頁
 - 使用 Home/End 鍵跳到首頁/尾頁
 
 ---
 
 - Click left/right buttons to flip pages
-- Swipe left/right on pages to flip
+- Swipe left/right on pages to flip (mobile)
 - Use arrow keys (←/→) to navigate
 - Use Home/End keys to jump to first/last page
 
@@ -85,6 +72,7 @@ judy-booklet-easier/
 ├── index.html      # 主 HTML 檔案 / Main HTML file
 ├── styles.css      # 樣式表 / Stylesheet
 ├── script.js       # JavaScript 功能 / JavaScript functions
+├── cover.jpeg      # 封面圖片 / Cover image
 └── README.md       # 說明文件 / Documentation
 ```
 
@@ -111,18 +99,29 @@ judy-booklet-easier/
 Edit gradient colors in `styles.css`:
 
 ```css
-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+background: linear-gradient(135deg, #f4a582 0%, #d4896f 50%, #a8846f 100%);
 ```
+
+目前的配色是根據封面的暖色調設計。
+Current color scheme is designed to match the warm tones of the cover image.
 
 ### 調整頁面大小 Adjust Page Size
 編輯 `script.js` 中的 `getFlipbookWidth()` 和 `getFlipbookHeight()` 函數。
 
 Edit `getFlipbookWidth()` and `getFlipbookHeight()` functions in `script.js`.
 
-### 添加內容 Add Content
-直接編輯 `index.html` 中的內容，記得同時更新滾動模式和掀頁模式的內容。
+目前的場刊比例為 4:5（與封面 1080x1350 相同）。
+- 手機版：480px × 600px
+- 桌面版：640px × 800px
 
-Edit content in `index.html`, remember to update both scroll and flip modes.
+Current booklet ratio is 4:5 (matching cover 1080x1350).
+- Mobile: 480px × 600px
+- Desktop: 640px × 800px
+
+### 添加內容 Add Content
+直接編輯 `index.html` 中的內容。
+
+Edit content in `index.html`.
 
 ## 問題排解 Troubleshooting
 

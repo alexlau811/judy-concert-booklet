@@ -6,7 +6,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #f4a582 0%, #d4896f 50%, #a8846f 100%);
     min-height: 100vh;
     padding: 20px 10px;
     line-height: 1.6;
@@ -17,103 +17,13 @@ body {
     margin: 0 auto;
 }
 
-/* Controls */
-.controls {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.toggle-btn {
-    background: #fff;
-    color: #667eea;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 25px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-}
-
-.toggle-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-.toggle-btn:active {
-    transform: translateY(0);
-}
-
-/* Scroll Mode */
-.scroll-mode {
-    display: none;
-}
-
-.scroll-mode.active {
-    display: block;
-}
-
-.page {
-    background: #fff;
-    padding: 30px 20px;
-    margin-bottom: 15px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 0.5s ease;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Cover Page */
-.cover-page {
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #fff;
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.cover-page h1 {
-    font-size: 32px;
-    margin-bottom: 15px;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.cover-page h2 {
-    font-size: 24px;
-    margin-bottom: 30px;
-    font-weight: 400;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-.subtitle, .subtitle-en {
-    font-size: 16px;
-    margin: 8px 0;
-    opacity: 0.95;
-}
-
 /* Section Titles */
 .section-title {
     font-size: 24px;
-    color: #667eea;
+    color: #d4896f;
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 3px solid #667eea;
+    border-bottom: 3px solid #d4896f;
 }
 
 /* Program Items */
@@ -143,7 +53,7 @@ body {
 
 .piece {
     font-size: 15px;
-    color: #764ba2;
+    color: #c67b5c;
     margin: 8px 0;
     font-weight: 500;
 }
@@ -155,26 +65,30 @@ body {
     font-style: italic;
 }
 
-.video-link {
-    display: inline-block;
-    color: #667eea;
-    text-decoration: none;
-    padding: 8px 16px;
-    background: #f0f0f0;
+/* Video Embed */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    margin: 15px 0;
     border-radius: 8px;
-    margin-top: 8px;
-    word-break: break-all;
-    font-size: 13px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.video-link:hover {
-    background: #e0e0e0;
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 /* Cast */
 .cast h5 {
     font-size: 16px;
-    color: #667eea;
+    color: #d4896f;
     margin: 15px 0 10px 0;
 }
 
@@ -191,19 +105,19 @@ body {
     padding: 15px;
     background: #f8f8f8;
     border-radius: 10px;
-    border-left: 4px solid #764ba2;
+    border-left: 4px solid #c67b5c;
 }
 
 .musical-act h5 {
     font-size: 16px;
-    color: #764ba2;
+    color: #c67b5c;
     margin-bottom: 12px;
     font-weight: 600;
 }
 
 .song {
     font-size: 14px;
-    color: #667eea;
+    color: #d4896f;
     margin: 8px 0;
     font-weight: 500;
 }
@@ -224,7 +138,7 @@ body {
 
 .thanks h4 {
     font-size: 18px;
-    color: #667eea;
+    color: #d4896f;
     margin-bottom: 15px;
 }
 
@@ -238,35 +152,98 @@ body {
     margin-top: 30px;
     padding: 20px;
     font-size: 18px;
-    color: #764ba2;
+    color: #c67b5c;
     font-weight: 600;
 }
 
 /* Flip Mode */
 .flip-mode {
-    display: none;
-    text-align: center;
-}
-
-.flip-mode.active {
     display: block;
+    text-align: center;
+    position: relative;
 }
 
 #flipbook {
     width: 90%;
-    max-width: 480px;
-    height: 640px;
+    /* max-width: 480px; */
+    height: 600px;
     margin: 0 auto 20px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
     border-radius: 15px;
     overflow: hidden;
+    position: relative;
+    left: 0 !important;
+    top: 0 !important;
+    transform: none !important;
 }
 
 .page-flip {
     background: #fff;
-    padding: 30px 20px;
     overflow-y: auto;
     font-size: 13px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Content wrapper for padding */
+.page-flip .content {
+    padding: 30px 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* Cover page in flip mode */
+.page-flip.cover-page {
+    background: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+}
+
+.page-flip.cover-page .content {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-flip.cover-page img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Sponsor pages */
+.page-flip.sponsor-page {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.page-flip.sponsor-page .content {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-flip.sponsor-page img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
 }
 
 .page-flip .section-title {
@@ -284,6 +261,26 @@ body {
     font-size: 12px;
 }
 
+/* Video in flip mode - make it smaller to fit better */
+.page-flip .video-container {
+    margin: 10px 0;
+}
+
+/* Turn.js wrapper fixes */
+.flip-mode .turn-page {
+    background: #fff;
+}
+
+/* Prevent layout shift during page flip */
+.flip-mode {
+    min-height: 700px;
+}
+
+/* Ensure flipbook stays in place */
+#flipbook * {
+    box-sizing: border-box;
+}
+
 /* Flip Controls */
 .flip-controls {
     display: flex;
@@ -291,11 +288,13 @@ body {
     align-items: center;
     gap: 20px;
     margin-top: 20px;
+    position: relative;
+    z-index: 10;
 }
 
 .flip-controls button {
     background: #fff;
-    color: #667eea;
+    color: #c67b5c;
     border: none;
     padding: 10px 20px;
     border-radius: 25px;
@@ -337,56 +336,17 @@ body {
         max-width: 800px;
     }
 
-    .page {
-        padding: 40px 50px;
-        margin-bottom: 20px;
-    }
-
-    .cover-page {
-        padding: 80px 40px;
-    }
-
-    .cover-page h1 {
-        font-size: 48px;
-    }
-
-    .cover-page h2 {
-        font-size: 32px;
-    }
-
-    .subtitle, .subtitle-en {
-        font-size: 18px;
-    }
-
-    .section-title {
-        font-size: 28px;
-    }
-
-    .program-item h4 {
-        font-size: 20px;
-    }
-
-    .bio,
-    .performance-detail {
-        font-size: 16px;
-    }
-
-    .piece {
-        font-size: 17px;
-    }
-
-    .composer {
-        font-size: 15px;
-    }
-
     #flipbook {
-        width: 600px;
+        width: 640px;
         height: 800px;
     }
 
     .page-flip {
-        padding: 40px 30px;
         font-size: 14px;
+    }
+
+    .page-flip .content {
+        padding: 40px 30px;
     }
 
     .page-flip .section-title {
@@ -412,15 +372,13 @@ body {
         padding: 0;
     }
 
-    .controls,
     .flip-controls {
         display: none;
     }
 
-    .page {
+    .page-flip {
         page-break-after: always;
         box-shadow: none;
-        margin-bottom: 0;
     }
 }
 
