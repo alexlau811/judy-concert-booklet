@@ -85,6 +85,28 @@ body {
     border: none;
 }
 
+/* Download Link */
+.download-link {
+    margin: 12px 0;
+    padding: 10px 15px;
+    background: #f0f0f0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.download-link a {
+    color: #c67b5c;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.download-link a:hover {
+    color: #d4896f;
+    text-decoration: underline;
+}
+
 /* Cast */
 .cast h5 {
     font-size: 16px;
